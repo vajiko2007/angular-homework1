@@ -1,0 +1,7 @@
+<div *ngFor="let user of users" [ngClass]="{'isActive': user.isActive, 'notActive': !user.isActive}">
+  <div>სახელი: {{user.firstName}}</div>
+  <div>გვარი: {{user.lastName}}</div>
+  <div *appMyif="user.role === 'Admin'">
+    <button>წაშლა</button>
+  </div>
+</div>
